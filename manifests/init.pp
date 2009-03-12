@@ -21,8 +21,7 @@ class gems {
 
   file { "/usr/bin/gem":
     target => "/usr/bin/gem1.8",
-    ensure => present,
-    mode => 755,
+    ensure => link,
     require => Exec['gems-setup'] 
   }
 } 
