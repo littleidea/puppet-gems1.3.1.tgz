@@ -14,6 +14,7 @@ class gems {
  
   exec { gems-setup:
     command => "ruby /usr/local/src/rubygems-1.3.1/setup.rb",
+    cwd => "/user/local/src/rubygems-1.3.1",
     creates => "/usr/bin/gem1.8",
     require => Exec['gems-untar']
   }
